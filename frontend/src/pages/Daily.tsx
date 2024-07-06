@@ -32,7 +32,7 @@ const Daily = () => {
       {isLoading ? (
         <div>Loading...</div>
       ) : (
-        <div>
+        <div className="text-lg font-medium">
           {daily.map( d => <DailyContent key={d.id} daily={d} /> )}
         </div>
       )}

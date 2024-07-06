@@ -44,20 +44,32 @@ const DailyDetail = () => {
       {isLoading ? (
         <div>Loading...</div>
       ) : (
-        <div>
-          <h1>{detail.date}</h1>
-          <h2>University</h2>
-          <p>{detail.univ}</p>
-          <h2>Study</h2>
+        <div className="space-y-6">
+          <h1 className="text-2xl font-semibold text-slate-400">{detail.date}</h1>
+          <div>
+            <h2 className="mt-8 text-xl font-semibold">University</h2>
+            <p>{detail.univ || ''}</p>
+          </div>
+         <div>
+          <h2 className="text-xl font-semibold">Study</h2>
           <p>{detail.study}</p>
-          <h2>Other</h2>
-          <p>{detail.other}</p>
-          <h2>New</h2>
-          <p>{detail.new}</p>
-          <h2>What I wanna do</h2>
-          <p>{detail.wanna}</p>
-          <h2>Summary</h2>
-          <p>{detail.summary}</p>
+         </div>
+          <div>
+            <h2 className="text-xl font-semibold">Other</h2>
+            <p>{detail.other}</p>
+          </div>
+          <div>
+            <h2 className="text-xl font-semibold">New</h2>
+            <p>{detail.new}</p>
+          </div>
+          <div>
+            <h2 className="text-xl font-semibold">What I wanna do</h2>
+            <p>{detail.wanna}</p>
+          </div>
+          <div>
+            <h2 className="text-xl font-semibold">Summary</h2>
+            <p>{detail.summary}</p>
+          </div>
         </div>
       )}
       <CategoryList />
